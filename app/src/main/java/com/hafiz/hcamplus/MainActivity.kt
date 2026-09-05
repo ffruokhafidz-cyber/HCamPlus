@@ -157,7 +157,6 @@ class MainActivity : ComponentActivity() {
             when(which){0->{jpegQuality=95;exposure=0;zoom=1f};1->{jpegQuality=92;exposure=0};2->{jpegQuality=100;exposure=0};3->{jpegQuality=100;exposure=-1}}
             camera?.cameraControl?.setExposureCompensationIndex(exposure)
             camera?.cameraControl?.setZoomRatio(zoom)
-            imageCapture?.setJpegQuality(jpegQuality)
             b.status.text="● CONFIG • ${options[which]}"
         }.setNegativeButton("Cancel",null).show()
     }
