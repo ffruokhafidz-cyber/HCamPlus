@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#07070A">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/preview"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        app:scaleType="fillCenter"/>
+
+    <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="#22000000"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="16dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="58dp"
+            android:gravity="center_vertical">
+            <TextView android:id="@+id/logo" android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="HCam+" android:textColor="#FFFFFF"
+                android:textSize="25sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/status" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="● READY" android:textColor="#64E3A3" android:textSize="12sp"/>
+        </LinearLayout>
+
+        <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <TextView android:id="@+id/timerLabel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:text="Timer 0s" android:textColor="#FFFFFF"
+            android:background="#99000000" android:padding="9dp"/>
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="55dp"
+            android:scrollbars="none">
+            <LinearLayout android:id="@+id/modeRow" android:layout_width="wrap_content" android:layout_height="match_parent"
+                android:gravity="center_vertical" android:orientation="horizontal"/>
+        </HorizontalScrollView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="90dp"
+            android:gravity="center_vertical">
+            <Button android:id="@+id/timerButton" android:layout_width="0dp" android:layout_height="56dp"
+                android:layout_weight="1" android:text="⏱ 0s" android:textAllCaps="false"/>
+            <ImageButton android:id="@+id/shutter" android:layout_width="78dp" android:layout_height="78dp"
+                android:layout_marginHorizontal="10dp" android:background="@android:color/white"
+                android:src="@android:drawable/ic_menu_camera" android:contentDescription="Shutter"/>
+            <Button android:id="@+id/configButton" android:layout_width="0dp" android:layout_height="56dp"
+                android:layout_weight="1" android:text="⚙ Config" android:textAllCaps="false"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<resources>
+<style name="Theme.HCamPlus" parent="Theme.Material3.Dark.NoActionBar">
+    <item name="android:fontFamily">sans</item>
+    <item name="android:windowLightStatusBar">false</item>
+    <item name="android:statusBarColor">#07070A</item>
+    <item name="android:navigationBarColor">#07070A</item>
+    <item name="colorPrimary">#9B5CFF</item>
+</style>
+</resources>
